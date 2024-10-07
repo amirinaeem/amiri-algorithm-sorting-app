@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm Sorting App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!--------------------------navbar------------------------------>
+      <nav>
+        <div class="navbar">
+          <!----------left-navbar------------->
+          <div class="small-menu">
+            <img src="cipherimg.gif" />
+            <a href="#">Algorithm</a>
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <!--------End of left-navbar-------->
+          <!----------Right-navbar------------->
+          <div>
+            <ul>
+              
+              <li>
+                <a href="#" class="top-btn"><span>Bubble Sort</span></a>
+              </li>
+              <li>
+                <a href="#" class="top-btn"><span>Selection Sort</span></a>
+              </li>
+              <li>
+                <a href="#" class="top-btn"><span>Insertion Sort</span></a>
+              </li>
+              <li>
+                <a href="#" class="top-btn"><span>Quick Sort</span></a>
+              </li>
+              <li>
+                <a href="#" class="top-btn"><span>Merge Sort</span></a>
+              </li>
+              <li>
+                <a href="#" class="top-btn"><span>Home</span></a>
+              </li>
+             
+            </ul>
+          </div>
+          <!----------End of Right-navbar------------->
+        </div>
+      </nav>
+      <!-------------------end of navbar------------------->
+    </header>
+    <main>
+      <div class="main-container">
+        <div class="aside-features">
+          <button type="button" id="bubble-sort" class="btn">Bubble Sort</button>
+          <button type="button" id="selection-sort" class="btn">Selection Sort</button>
+          <button type="button" id="insertion-sort" class="btn">Insertion Sort</button>
+          <button type="button" id="quic-sort" class="btn"> Quick Sort</button>
+          <button type="button" id="merge-page" class="btn">Merge Page</button>
+          <button type="button" id="merge-sort" class="btn">Merge Sort</button>
+        </div>
+        <div class="container" id="container">
+          <div class="first-shelf-container">
+            <div class="first-span-box" id="first-span-box"></div>
+            <div class="first-span-shelf shelf" id="first-span-shelf"></div>
+          </div>
+
+          <div class="final-shelf-container">
+            <div class="final-span-box" id="final-span-box"></div>
+            <div class="final-span-shelf shelf" id="final-span-shelf"></div>
+          </div>
+
+        </div>
+        <div id="display-container" class="container merge-container" style="height: 100%;">
+          <div id="unsorted-box" style="margin-top: 8vw"></div>
+          <div class="first-shelf shelf" id="first-unsorted-shelf"></div>
+          
+          <div id="break-down-container">
+            <div class="break-parent" >
+                <div id ="break-box" class ="break-box" style ="width: 60vw"></div>
+              <div id="break-shelf" class="shelf" style ="width: 60vw"></div>
+            </div>
+          
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+          
+            </div>
+          
+            <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+          
+            </div>
+          
+            <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+          
+            </div>
+          
+            <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+          
+            </div>
+          
+            <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+            </div>
+          
+              <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+            </div>
+          
+              <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+            </div>
+          
+              <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+            </div>
+          
+              <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+            </div>
+          
+              <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+            </div>
+          
+              <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+            </div>
+          
+              <div class="break-parent">
+                <div id ="break-box" class ="break-box"></div>
+              <div id="break-shelf" class="shelf"></div>
+            </div>
+          
+            <div class="left-right-container" id="left-right-container">
+          
+              <div class ="left-div">
+                  <div id ="left-box" class ="left-box"></div>
+                  <div id="left-shelf" class="shelf"></div>
+              </div>
+          
+              <div class ="right-div">
+              <div id ="right-box" class ="right-box"></div>
+              <div id="right-shelf" class="shelf"></div>
+              </div>
+            </div>
+          
+                <div class="break-parent">
+                <div id ="break-box" class = "combined-box" style = "width: 70vw; margin-top: 10rem"></div>
+                <div id="break-shelf" class="shelf" style = "width: 70vw"></div>
+                </div>
+          
+                <div class="break-parent">
+                <div id ="break-box" class = "combined-box"></div>
+                <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                <div class="break-parent">
+                <div id ="break-box" class = "combined-box"></div>
+                <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                <div class="break-parent">
+                  <div id ="break-box" class = "combined-box"></div>
+                  <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                  <div class="break-parent">
+                  <div id ="break-box" class = "combined-box"></div>
+                  <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                      <div class="break-parent">
+                  <div id ="break-box" class = "combined-box"></div>
+                  <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                      <div class="break-parent">
+                  <div id ="break-box" class = "combined-box"></div>
+                  <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                      <div class="break-parent">
+                  <div id ="break-box" class = "combined-box"></div>
+                  <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                      <div class="break-parent">
+                  <div id ="break-box" class = "combined-box"></div>
+                  <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                      <div class="break-parent">
+                  <div id ="break-box" class = "combined-box"></div>
+                  <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+                <div class="break-parent" style ="margin-bottom: 5rem">
+                  <div id ="break-box" class = "combined-box"></div>
+                  <div id="break-shelf" class="shelf"></div>
+                </div>
+          
+          </div>
+        
+        </div>
+        <div class="reset-container" style = "display: flex;">
+          <button type="button" id="generate-ball">Generate Number</button>
+          <button type="button" id="reset-btn">Reset Process</button>
+        </div>
+
+      </div>
+      <div class="info-big-container">
+        <div id="bubble-sort-info" class="info-container">
+          <h1 class="title">Bubble Sort</h1>
+          <p>In this approach, The Bubble Sort in JavaScript is used by
+            iterating through the array, comparing adjacent elements,
+            and swapping them if they are in the wrong order. This process
+            repeats until the array is fully sorted, with the sorted array
+            returned at the end.
+          </p>
+             <br>
+             <span><stron>Example:</stron></span>
+             Example: The example below shows sorting algorithms in JavaScript using Bubble Sort.
+             <img src="bubble.png"></img>
+            <p><strong>Time Complexity:</strong> O(n^2)</p>
+            <p><strong>Space Complexity:</strong> O(1)</p>
+            <hr>
+          <h2>Pros and Cons of Bubble Sort</h2>
+          <p>pros:</p>
+          <p><strong> 2- In-Place Sorting:</strong></p>
+          <p>
+            Bubble sort sorts the array "in-place," meaning it does not
+             require additional storage space (only a constant amount,
+              O(1)). This can be advantageous in systems with limited memory.
+          </p>
+          <p><strong> 3- Stable Sorting:</strong></p>
+          <p>
+            It maintains the relative order of records with equal keys (i.e., it’s a stable sort),
+            which can be useful when sorting data that has multiple fields to be
+            sorted (such as sorting by last name while keeping the first names in order).
+          </p>
+          <p><strong> 4- Adaptive (with Optimizations):</strong></p>
+          <p>
+            With slight modifications (like adding a flag to detect if the array is already sorted),
+             bubble sort can perform well on small, nearly sorted data. In this
+              case, it can stop early if no swaps are needed, improving performance.
+          </p>
+        
+          <h3>Cons:</h3>
+          <p><strong> 1- Poor Time Complexity:</strong></p>
+          <p>
+            Worst-case and Average-case Time Complexity: O(n²): Bubble
+             sort performs O(n) passes through the list, and in each pass,
+              it does O(n) comparisons, resulting in O(n²) time complexity.
+               This makes it inefficient for large datasets compared to other
+                sorting algorithms like merge sort (O(n log n)) or quicksort.
+          </p>
+          <p><strong> 2- Not Suitable for Large Datasets:</strong></p>
+          <p>
+            Due to its quadratic time complexity, bubble sort becomes inefficient when
+             dealing with larger datasets. Algorithms like quicksort or merge sort
+              are better choices for performance-critical applications.
+          </p>
+          <p><strong> 3- Inefficient Even in the Best Case (O(n)):</strong></p>
+          <p>
+            Even in its best case, bubble sort requires O(n) comparisons to determine
+             that an array is already sorted, which is slower than the best-case
+              time complexity of O(1) for algorithms like insertion sort when
+               the array is already sorted.
+          </p>
+          <p><strong> 4- High Number of Swaps:</strong></p>
+          <p>
+            WBubble sort performs a large number of swaps, which increases
+            the time complexity and can degrade performance when compared
+            to algorithms that minimize the number of swaps, such as selection sort.
+          </p>
+        </div>
+  
+        <div id="selection-sort-info" class="info-container">
+          <h1 class="title">Selection Sort</h1>
+          <p>In this approach, the code implements selection sort by iterating
+             through the array, finding the smallest element, and swapping it
+              with the current element. Finally, it returns the sorted array
+          </p>
+             <br>
+             <span><stron>Example:</stron></span>
+             Example: The example below shows Sorting Algorithms in JavaScript using Selection Sort.
+             <img src="selection.png"></img>
+            <p><strong>Time Complexity:</strong> O(n^2)</p>
+            <p><strong>Space Complexity:</strong> O(1)</p>
+            <hr>
+          <h2>Pros and Cons of Bubble Sort</h2>
+          <h3>pros:</h3>
+          <p><strong> 1- Simple to Understand and Implement:</strong></p>
+          <p>
+            Like bubble sort, selection sort is simple and intuitive. It's easy 
+            to implement and understand, making it a good choice for teaching
+             basic sorting concepts.
+          </p>
+          <p><strong> 2- In-Place Sorting:</strong></p>
+          <p>
+            Selection sort is an in-place sorting algorithm, meaning it doesn't
+             require additional memory beyond the original array and a constant
+              amount of extra space (O(1) auxiliary space).
+          </p>
+          <p><strong> 3- Performance on Small Datasets:</strong></p>
+          <p>
+            Selection sort can perform reasonably well on small datasets
+            because of its simplicity. If the data size is small, the time
+            complexity isn't as critical, and the algorithm can be acceptable.
+          </p>
+          <p><strong> 4- Number of Swaps is Minimal:</strong></p>
+          <p>
+            Selection sort makes a minimal number of swaps compared to algorithms like
+             bubble sort. Specifically, it makes at most n - 1 swaps, where n
+              is the number of elements. This can be beneficial if swapping 
+              elements is an expensive operation (e.g., writing to disk or network operations).
+          </p>
+        
+          <h3>Cons:</h3>
+          <p><strong> 1- Poor Time Complexity:</strong></p>
+          <p>
+            Like bubble sort, selection sort performs poorly in terms of time complexity,
+             making it inefficient for large datasets. The algorithm requires O(n²) comparisons,
+              as it iterates through the list to find the smallest element at each step.
+          </p>
+          <p><strong> 2- Not Adaptive:</strong></p>
+          <p>
+            Selection sort doesn't adapt to the data being sorted. Even if the array is already
+             sorted or nearly sorted, selection sort will still make O(n²) comparisons.
+              There are no optimizations to stop early.
+          </p>
+          <p><strong> 3- Inefficient for Large Datasets:</strong></p>
+          <p>
+            The O(n²) time complexity makes selection sort impractical for large datasets.
+             Algorithms like quicksort, mergesort, or heapsort are much more efficient
+              for large inputs.
+          </p>
+          <p><strong> 4- Unstable:</strong></p>
+          <p>
+            Unlike bubble sort, selection sort is not stable, meaning that it may change
+             the relative order of elements with equal values. This can be problematic
+              if maintaining the relative order of equal elements is important in your 
+              data (such as sorting objects based on one property while keeping others intact).
+          </p>
+        </div>
+  
+        <div id="insertion-sort-info" class="info-container">
+          <h1 class="title">Insertion Sort</h1>
+          <p>
+            In this approach, utilize the Insertion Sort algorithm to arrange
+             elements in ascending order by repeatedly placing each element
+              in its correct position among the already sorted elements.
+               Finally, the sorted array is returned.
+          </p>
+             <br>
+             <span><stron>Example:</stron></span>
+             Example: The example below shows Sorting Algorithms in JavaScript using Insertion Sort.
+             <img src="insertion.png"></img>
+            <p><strong>Time Complexity:</strong> O(n^2)</p>
+            <p><strong>Space Complexity:</strong> O(1)</p>
+            <hr>
+          <h2>Pros and Cons of Insertion Sort</h2>
+          <h3>pros:</h3>
+          <p><strong> 1- Simple to Understand and Implement:</strong></p>
+          <p>
+            Insertion sort is one of the most straightforward sorting algorithms
+             to implement. Its logic is intuitive, making it an excellent choice
+              for teaching basic sorting concepts.
+          </p>
+          <p><strong> 2- Efficient for Small Data Sets:</strong></p>
+          <p>
+            Insertion sort can be faster than more complex algorithms like quicksort
+             or mergesort on small datasets, often outperforming them for small input
+              sizes due to low overhead.
+          </p>
+          <p><strong> 3- Adaptive:</strong></p>
+          <p>
+            Insertion sort is adaptive, meaning it becomes more efficient if the array is
+             already partially sorted. If the array is nearly sorted, the time complexity
+              can approach O(n), making it efficient in such cases.
+          </p>
+          <p><strong> 4- Stable Sorting:</strong></p>
+          <p>
+            Insertion sort is a stable algorithm. It preserves the relative order of elements
+             with equal values, which can be important in certain applications, such as sorting
+              objects based on multiple criteria.
+          </p>
+          <h3>Cons:</h3>
+          <p><strong> 1- Poor Time Complexity:</strong></p>
+          <p>
+            Time Complexity: O(n²) in the average and worst case. Insertion
+             sort performs poorly on large datasets due to its quadratic time
+              complexity. As the number of elements increases, the number of
+               comparisons and shifts grows rapidly.
+          </p>
+          <p><strong> 2- Performance Degrades with Unsorted Data:</strong></p>
+          <p>
+            When the data is in reverse or completely unsorted, the algorithm
+             still has to perform O(n²) comparisons and shifts, which leads to
+              poor performance.
+          </p>
+          <p><strong> 3- Shifting Overhead:</strong></p>
+          <p>
+            Insertion sort requires a lot of shifting to place elements in their correct
+             positions. This can add significant overhead for large arrays, particularly
+              if the data is far from sorted.
+          </p>
+          <p><strong> 4- Not Suitable for Parallelization:</strong></p>
+          <p>
+            Insertion sort is a sequential algorithm and doesn't lend itself
+            well to parallel execution, limiting its scalability on multi-core systems..
+          </p>
+        </div>
+        <div id="quick-sort-info" class="info-container">
+          <h1 class="title">Quick Sort</h1>
+          <p>
+            Quick Sort is a highly efficient and commonly used sorting
+             algorithm that follows the divide and conquer paradigm.
+              It works by selecting a "pivot" element from the array,
+               partitioning the array into two subarrays based on this
+                pivot (elements less than the pivot on one side, greater
+                 on the other), and then recursively sorting the subarrays.
+          </p>
+             <br>
+             <span><stron>Example:</stron></span>
+             Example: The example below shows Sorting Algorithms in JavaScript using Quick Sort.
+             <img src="quick.png"></img>
+            <p><strong>Time Complexity:</strong> Ω (N log (N)) || θ ( N log (N)) || O(N ^ 2) </p>
+            <p><strong>Space Complexity:</strong> O(1)</p>
+            <hr>
+          <h2>Pros and Cons of Insertion Sort</h2>
+          <h3>pros:</h3>
+          <p><strong> 1- Average Case Efficiency:</strong></p>
+          <p>
+            Time Complexity: O(n log n) on average, which makes it one
+             of the fastest sorting algorithms for large datasets.
+             Even though the worst-case time complexity is O(n²), careful
+              pivot selection (e.g., using "median of three" or random pivots) 
+              can significantly reduce the chance of this happening.
+          </p>
+          <p><strong> 2-In-Place Sorting:</strong></p>
+          <p>
+            Unlike merge sort, which requires extra space to merge subarrays,
+            quick sort typically operates in-place and only uses a small,
+             constant amount of additional memory (O(log n) for recursion).
+          </p>
+          <p><strong> 3- Cache Friendly:</strong></p>
+          <p>
+            Quick sort exhibits good locality of reference, meaning elements
+             that are closer to each other in the array tend to be accessed
+              close together in time, making it efficient with respect to cache performance.
+          </p>
+          <p><strong> 4-Tail Recursion Optimizations:</strong></p>
+          <p>
+            In certain implementations, the recursion can be optimized to reduce the overhead
+             by converting the recursion into a loop (tail call optimization).
+          </p>
+          <h3>Cons:</h3>
+          <p><strong> 1- Worst-Case Time Complexity: O(n²):</strong></p>
+          <p>
+            The worst case occurs when the pivot divides the array in a highly unbalanced
+             manner, e.g., if the array is already sorted or if the pivot always ends up
+              being the smallest or largest element. This leads to O(n²) time complexity.
+          </p>
+          <p><strong> 2- Unstable:</strong></p>
+          <p>
+            Quick sort is not a stable algorithm, meaning that if two elements have 
+            the same value, their relative order in the array may change during the sorting process.
+          </p>
+          <p><strong> 3- Pivot Selection:</strong></p>
+          <p>
+            The performance of quick sort heavily depends on the choice of the pivot.
+             A bad pivot (like choosing the first element in an already sorted array)
+              can result in poor performance. Random or "median-of-three" pivot strategies can help mitigate this.
+          </p>
+          <p><strong> 4- Recursive Overhead:</strong></p>
+          <p>
+            Quick sort uses recursion, and deep recursion can lead to stack overflow
+             errors for large arrays, especially if the recursion depth is close to O(n).
+          </p>
+        </div>
+        <div id="merge-sort-info" class="info-container">
+          <h1 class="title">Merge Sort</h1>
+          <p>
+            In this approach, the code implements the merge sort algorithm recursively.
+             It divides the array into halves until each part contains only one element,
+              then merges them in sorted order. By repeatedly merging sorted subarrays,
+               it constructs the final sorted array. This method ensures efficient sorting.
+          </p>
+             <br>
+             <span><stron>Example:</stron></span>
+             Example: The example below shows Sorting Algorithms in JavaScript using Merge Sort.
+             <img src="merge.png"></img>
+            <p><strong>Time Complexity:</strong> O(n log n)</p>
+            <p><strong>Space Complexity:</strong> O(n)</p>
+            <hr>
+          <h2>Pros and Cons of Insertion Sort</h2>
+          <h3>pros:</h3>
+          <p><strong> 1- Guaranteed Time Complexity:</strong></p>
+          <p>
+            Time Complexity: O(n log n) in the best, worst, and average case.
+             Merge sort consistently performs well on any input, unlike some algorithms
+              (e.g., quicksort) that may degrade to O(n²) in the worst case.
+          </p>
+          <p><strong> 2- Stable Sorting:</strong></p>
+          <p>
+            Merge sort is a stable algorithm, meaning it maintains the relative
+             order of records with equal values. This is important when the stability
+              of sorting is required (e.g., sorting based on multiple keys).
+          </p>
+          <p><strong> 3- Predictable Performance:</strong></p>
+          <p>
+            Merge sort always splits the array in half, making its performance
+             predictable and reliable across different datasets, regardless 
+             of the input order.
+          </p>
+          <p><strong> 4- Efficient for Large Data Sets:</strong></p>
+          <p>
+            Due to its O(n log n) complexity, merge sort is efficient for handling
+             large datasets and is commonly used in external sorting where data
+              doesn't fit into memory.
+          </p>
+          <h3>Cons:</h3>
+          <p><strong> 1- Space Complexity:</strong></p>
+          <p>
+            Merge sort is not an in-place sorting algorithm, meaning it requires
+             extra memory to store the temporary subarrays during the merge process.
+              This makes it less ideal in environments where memory is limited.
+          </p>
+          <p><strong> 2- Slower on Small Data Sets:</strong></p>
+          <p>
+            Merge sort has more overhead compared to simpler algorithms
+             like insertion or bubble sort when working with small datasets.
+              Its constant factors are higher, making it slower for small inputs.
+          </p>
+          <p><strong> 3- Complexity in Implementation:</strong></p>
+          <p>
+            While the core idea is simple, merge sort is relatively harder to implement 
+            compared to simpler algorithms like selection sort or bubble sort,
+             particularly with in-place optimizations.
+          </p>
+          <p><strong> 4- Recursive Overhead:</strong></p>
+          <p>
+            Merge sort is typically implemented using recursion, which adds overhead
+             due to recursive function calls. This may lead to issues like stack overflow
+              on very large datasets if the recursion depth exceeds the stack limit
+               (though this can be mitigated with iterative implementations).
+          </p>
+        </div>
+      </div>
+
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
+
+
+
+
+
